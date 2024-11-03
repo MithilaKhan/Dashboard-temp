@@ -19,12 +19,12 @@
 
 /* ant design menu option */
 .ant-menu-item:hover {
-  background-color: #6C57EC !important;
+  background-color: #007BA5 !important;
   color: #fff !important;
 }
 
 .ant-menu-item-selected {
-  background-color: #6C57EC !important;
+  background-color: #007BA5 !important;
   color: #fff !important;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .ant-menu-light .ant-menu-submenu-selected >.ant-menu-submenu-title{
-  color: #6C57EC !important;
+  color: #007BA5 !important;
 }
 
 .ant-menu .ant-menu-title-content{
@@ -41,7 +41,7 @@
 }
 
 .ant-badge .ant-badge-count {
-  background: #6C57EC !important;
+  background: #007BA5 !important;
   color: white !important;
 }
 

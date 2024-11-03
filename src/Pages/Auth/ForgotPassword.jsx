@@ -18,10 +18,9 @@ const ForgotPassword = () => {
   return (
     <div>
 
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h1 className="text-[25px] font-semibold mb-6">Forgot Password</h1>
-          <p className="w-[80%] mx-auto">We'll send a verification code to your email. Check your inbox and
-          enter the code here.</p>
+          <p className="w-[90%] mx-auto text-base">Enter your email below to reset your password</p>
         </div>
 
         <Form layout="vertical" onFinish={onFinish}>
@@ -49,20 +48,22 @@ const ForgotPassword = () => {
             </Form.Item>
 
           <Form.Item>
-            <Button
-              htmlType="submit"
+            <button
+              htmlType="submit" 
+              type="submit"
               style={{
-                width: "100%",
-                height: 40,
-                border: "1px solid #d9d9d9",
-                outline: "none",
-                boxShadow: "none",
-                background: "#6C57EC",
-                color: "white"
+                width: '100%',
+                height: 45,
+                color: "white",
+                fontWeight: "400px",
+                fontSize: "18px",
+           
+                marginTop: 20
               }}
+              className="flex items-center justify-center bg-primary rounded-lg"
             >
              Send OTP
-            </Button>
+            </button>
           </Form.Item>
         </Form>
     </div>

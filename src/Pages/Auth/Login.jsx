@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import FormItem from "../../components/common/FormItem";
 // import Cookies from "js-cookie"; 
-import Spinner from "../../components/common/Spinner";
+
 
 const Login = () => {
   const navigate = useNavigate()
@@ -17,8 +17,9 @@ const Login = () => {
   };
 
   return (
-    <div>
-        <div className="text-center mb-12">
+    <div 
+    >
+        <div className="text-center mb-8">
           <h1 className="text-[25px] font-semibold mb-6">Login</h1>
           <p>Please enter your email and password to continue</p>
         </div>
@@ -57,7 +58,7 @@ const Login = () => {
               </Form.Item>
 
               <a
-                className="login-form-forgot"
+                className="login-form-forgot text-primary font-semibold"
                 href="/auth/forgot-password"
               >
                 Forgot password
@@ -65,21 +66,22 @@ const Login = () => {
           </div>
 
           <Form.Item style={{marginBottom: 0}}>
-            <Button
-              htmlType="submit"
+            <button
+              htmlType="submit" 
+              type="submit"
               style={{
                 width: '100%',
                 height: 45,
                 color: "white",
                 fontWeight: "400px",
                 fontSize: "18px",
-                background: "#6C57EC",
+           
                 marginTop: 20
               }}
-              className="flex items-center justify-center"
+              className="flex items-center justify-center bg-primary rounded-lg"
             >
               {/* {isLoading? < Spinner/> : "Sign in"} */} Sign in
-            </Button>
+            </button>
           </Form.Item>
 
           

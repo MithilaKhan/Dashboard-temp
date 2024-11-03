@@ -1,7 +1,5 @@
 import { Menu } from 'antd';
 import React, { useEffect, useState } from 'react';
-import { CiDiscount1 } from 'react-icons/ci';
-import Logo from "../../assets/logo.png";
 import { MdOutlineCategory } from 'react-icons/md';
 import { AiOutlineDashboard } from 'react-icons/ai';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -133,14 +131,8 @@ const Sidebar = () => {
 
     return (
         <div className='mt-5'>
-            <Link to={"/"}>
-                <img
-                    src={Logo}
-                    alt='profile'
-                    width={200}
-                    height={50}
-                    style={{ margin: "0 auto 20px auto" }}
-                />
+            <Link to={"/"} className=' flex items-center justify-center py-4'>
+            <p className="text-4xl font-semibold font-sans tracking-wider text-primary">TradCouples</p>
             </Link>
             <Menu
                 mode="inline"

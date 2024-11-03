@@ -14,12 +14,12 @@ const Main = () => {
 
             {/* main container with header */}
             <div className='col-span-10'>
-                <div className='h-[64px] flex items-center justify-end pr-5'>
+                <div className='h-[68px] flex items-center justify-end pr-5'>
                     <Header/>
                 </div>
 
-                <div className='bg-slate-300 p-6 h-[calc(100vh-64px)]'>
-                    <div className='h-full overflow-y-auto rounded-md bg-white p-6'>
+                <div className='bg-[#F6F6F6] p-6 h-[calc(100vh-68px)]'>
+                    <div className='h-full overflow-y-auto rounded-md  p-6'>
                         <Outlet />
                     </div>
                 </div>

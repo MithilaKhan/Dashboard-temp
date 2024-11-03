@@ -23,49 +23,86 @@ const ResetPassword = () => {
           onFinish={onFinish}
         >
 
-          <Form.Item
-              name="password"
-              label={<p>New Password</p>}
+            <Form.Item
+              name="newPassword" 
+              label={ <p
+                style={{
+                  display: "block",
+                  color: "#5C5C5C",
+                }}
+                htmlFor="email"
+                className="font-semibold "
+              >
+                New Password
+              </p>}
               rules={[
                 {
                   required: true,
-                  message: "Please Enter New Password!",
+                  message: "Please input your new Password!",
                 },
               ]}
+              style={{ marginBottom: 0 }}
             >
               <Input.Password
                 type="password"
                 placeholder="Enter New password"
                 style={{
-                  height: 40,
-                  border: "1px solid #d9d9d9",
+                  border: "1px solid #E0E4EC",
+                  height: "52px",
+                  background: "white",
+                  borderRadius: "8px",
                   outline: "none",
-                  boxShadow: "none"
-                }}
+                }} 
+                className="mb-6"
               />
-            </Form.Item>
-
+            </Form.Item>       
+           
             <Form.Item
+              style={{ marginBottom: 0 }} 
+              label={ <p
+                style={{
+                  display: "block",
+                  color: "#5C5C5C",
+                }}
+                htmlFor="email"
+                className="font-semibold"
+              >
+                Confirm Password
+              </p>}
               name="confirmPassword"
-              label={<p>Confirm Password</p>}
+              dependencies={["newPassword"]}
+              hasFeedback
               rules={[
                 {
                   required: true,
-                  message: "Please Enter Confirm Password!",
+                  message: "Please confirm your password!",
                 },
+                ({ getFieldValue }) => ({
+                  validator(_, value) {
+                    if (!value || getFieldValue("newPassword") === value) {
+                      return Promise.resolve();
+                    }
+                    return Promise.reject(
+                      new Error("The new password that you entered do not match!")
+                    );
+                  },
+                }),
               ]}
             >
               <Input.Password
-                type="confirmPassword"
-                placeholder="Enter Confirm Password password"
+                type="password"
+                placeholder="Enter Confirm password"
                 style={{
-                  height: 40,
-                  border: "1px solid #d9d9d9",
+                  border: "1px solid #E0E4EC",
+                  height: "52px",
+                  background: "white",
+                  borderRadius: "8px",
                   outline: "none",
-                  boxShadow: "none"
-                }}
+                }} 
+                className="mb-6"
               />
             </Form.Item>
+      
 
             <Form.Item style={{marginBottom: 0}}>
             <Button
@@ -76,7 +113,7 @@ const ResetPassword = () => {
                 color: "white",
                 fontWeight: "400px",
                 fontSize: "18px",
-                background: "#6C57EC",
+                background: "#007BA5",
                 marginTop: 20
               }}
             >

@@ -9,12 +9,12 @@ import { RxDashboard } from "react-icons/rx";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import Logo from "../../assets/logo.png";
+// import Logo from "../../assets/logo.png"; 
 import { FaRegBell } from "react-icons/fa6";
 import { BiCrown } from "react-icons/bi";
 import { MdOutlineCategory } from "react-icons/md";
 import { MdOutlineEvent } from "react-icons/md";
-import ImgBaseURL from "../../../ImgBaseURL";
+// import ImgBaseURL from "../../../ImgBaseURL"; 
 import { useProfileQuery } from "../../redux/apiSlices/authSlice";
 const { Header, Sider, Content } = Layout;
 import { IoIosLogOut } from "react-icons/io";
@@ -78,10 +78,7 @@ const Dashboard = () => {
           }}
         >
           <Link to="/">
-            <img
-              src={Logo}
-              width={collapsed ? "50px" : "220px "}
-            />
+          <p className="text-2xl font-semibold font-sans tracking-wider text-primary">TradCouples</p>
           </Link>
         </div>
 
@@ -264,7 +261,7 @@ const Dashboard = () => {
             overflow: "auto"
           }}
         >
-          <div style={{background: "white", height: "100%", padding: 16, borderRadius: 8}}>
+          <div style={{background: "#FeFeFe", height: "100%", padding: 16, borderRadius: 8}}>
             <Outlet />
           </div>
         </Content>
